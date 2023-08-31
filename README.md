@@ -7,6 +7,7 @@ A Modern website where you can know more about GPT-3, about the future. created 
 - From soft and pleasant animations to complex gradients
 - Perfectly placed media queries for satisfactory responsiveness covering almost devices
 
+![gpt-3-img](./assets/GPT-3.png)
 
 ## Did you know
 - The Possibilities Are Beyond Your Imagination
@@ -23,8 +24,6 @@ A Modern website where you can know more about GPT-3, about the future. created 
 
 ## Sources
 
-### [The academy site](https://resource.jsmasterypro.com/)
-### [Main Live Site](https://gpt3-jsm.com/)
-### [Tutorial video](https://www.youtube.com/watch?v=F627pKNUCVQ&t=225s&pp=ygUfYnVpbGQgYW5kIGRlcGxveSA0IG1vZGVybiByZWFjdA%3D%3D)
-
-### Github repo, code and assets: "";
+### See [The academy site](https://resource.jsmasterypro.com/)
+### View [Main Live Site](https://gpt3-jsm.com/)
+### Show [Tutorial video](https://www.youtube.com/watch?v=F627pKNUCVQ&t=225s&pp=ygUfYnVpbGQgYW5kIGRlcGxveSA0IG1vZGVybiByZWFjdA%3D%3D)
