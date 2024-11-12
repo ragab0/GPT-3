@@ -1,4 +1,4 @@
-import Hero from "@/pages/hero/Hero";
+import Header from "@/pages/header/Header";
 import Footer from "@/components/footer/Footer";
 import Companies from "@/components/companies/Companies";
 import About from "@/pages/about/About";
@@ -8,8 +8,8 @@ import Studies from "@/pages/studies/Studies";
 
 export default function Home() {
   return (
-    <main id="home">
-      <Hero />
+    <main id="home" className=" overflow-hidden">
+      <Header />
       <Companies />
       <About />
       <OpenAI />

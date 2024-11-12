@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --text-main: rgba(129, 175, 221, 1);
   --text-main-lighted: rgba(113, 229, 255, 1);
   --text-fire: rgba(255, 138, 113, 1);
-
 
   --ui-section: rgba(4, 44, 84, 1);
   --ui-section-darked: rgba(3, 27, 52, 1);
@@ -16,9 +14,7 @@
   --ui-blur-3: rgba(7, 50, 95, 1);
   --ui-blur-sky-1: rgba(15, 66, 121, 1);
   --ui-blur-sky-2: rgba(27, 120, 222, 1);
-
 }
-
 
 ::selection {
   @apply !bg-white text-black;
@@ -40,94 +36,117 @@
   @apply duration-[50ms] ease-out;
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-ubuntu text-white bg-black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply capitalize font-bold !leading-[1.25];
+  }
+
+  h1,
+  h2 {
+    @apply bg-mainGradient bg-clip-text text-transparent;
+  }
+
+  h1 {
+    @apply text-5xl lg:text-7xl mt-12;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl lg:text-2xl relative mb-5;
+  }
+
+  h4 {
+    @apply text-lg relative mb-5;
+  }
+
+  h4::before,
+  h3::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-image: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  }
 }
 
-body {
-  @apply font-ubuntu text-white bg-black;
+@layer components {
+  .container {
+    @apply mx-auto px-4;
+  }
+
+  .btn,
+  .btns li {
+    @apply p-2  hover:opacity-80 cursor-pointer;
+  }
+  .btn-primary {
+    @apply cursor-pointer font-medium py-4 px-8 bg-red-600 hover:bg-red-700 text-white text-lg;
+  }
+
+  .texter {
+    @apply text-mainClr leading-8;
+  }
+
+  .bg-linear-after,
+  .bg-linear-before {
+    position: relative;
+  }
+
+  .bg-linear-after::after,
+  .bg-linear-before::before {
+    content: "";
+    @apply absolute left-0 top-0 w-[1000px] h-[1000px] bg-[#002853] z-[-1] -translate-x-1/2 -translate-y-1/2;
+    filter: blur(564px);
+  }
+
+  .bg-linear-after::after {
+    @apply left-full top-full -translate-x-1/2 -translate-y-1/2;
+  }
 }
 
-body h1,h2, h3,h4,h5,h6 {
-  @apply capitalize font-bold !leading-[1.25];
-}
+@layer utilities {
+  [aria-label] {
+    position: relative;
+  }
 
-body h1, h2 {
-  @apply bg-mainGradient bg-clip-text text-transparent;
-}
-
-body h1 {
-  @apply  text-5xl lg:text-7xl mt-12 ;
-}
-
-body h2 {
-  @apply  text-3xl lg:text-4xl;
-}
-
-body h3 {
-  @apply text-xl lg:text-2xl relative mb-5;
-}
-
-body h4 {
-  @apply text-lg relative mb-5;
-}
-
-body h4::before,
-body h3::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background-image: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
-}
-
-
-
-.container {
-  @apply mx-auto px-4;
-}
-
-.btn,
-.btns li {
-  @apply p-2 font-medium hover:opacity-80 cursor-pointer;
-}
-.btn-primary {
-  @apply cursor-pointer font-medium py-4 px-8 bg-red-600 hover:bg-red-700 text-white text-lg;
-}
-
-.texter {
-  @apply text-mainClr leading-8;
-}
-
-
-
-/* Aria label*/
-[aria-label] {
-  position: relative;
-}
-
-[aria-label]::before, 
-[aria-label]::after {
-  @apply absolute bottom-full left-1/2 -translate-x-1/2 w-max
+  [aria-label]::before,
+  [aria-label]::after {
+    @apply absolute bottom-full left-1/2 -translate-x-1/2 w-max
          capitalize text-xs text-black opacity-0;
-  content: "";
-  transition: all 0.18s ease-out 0.18s;
-  pointer-events: none; /*isolate it as different element not related ot it*/
-}
+    content: "";
+    transition: all 0.18s ease-out 0.18s;
+    pointer-events: none; /*isolate it as different element not related ot it*/
+  }
 
-[aria-label]::before {
-  @apply py-2 px-4 mb-[5px] rounded-[4px] bg-white;
-  content: attr(aria-label);
-}
-[aria-label]::after {
-  @apply border-[5px] mb-[-5px] border-transparent border-t-white;
-}
+  [aria-label]::before {
+    @apply py-2 px-4 mb-[5px] rounded-[4px] bg-white;
+    content: attr(aria-label);
+  }
+  [aria-label]::after {
+    @apply border-[5px] mb-[-5px] border-transparent border-t-white;
+  }
 
-[aria-label]:hover::before,
-[aria-label]:hover::after {
-  opacity: 1;
-  transform: translate(-50%, -5px);
+  [aria-label]:hover::before,
+  [aria-label]:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -5px);
+  }
 }

@@ -1,33 +1,17 @@
-import React from "react";
+import "./OpenAI.css";
 import Image from "next/image";
 import Possibility from "@/assets/imgs/possibility.webp";
-import "./OpenAI.css";
-
-const articles = [
-  {
-    heading: "Improving end distrusts instantly ",
-    desc: "From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded.",
-  },
-  {
-    heading: "Become the tended active",
-    desc: "Considered sympathize ten uncommonly occasional assistance sufficient not. Letter of on become he tended active enable to.",
-  },
-  {
-    heading: "Message or am nothing",
-    desc: "Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.",
-  },
-  {
-    heading: "Really boy law county",
-    desc: "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush.",
-  },
-];
+import { openAiarticles } from "@/assets/data/openAiArticles";
 
 export default function OpenAI() {
   return (
     <section id="open_ai" className="openai-section container pt-[200px]">
       <div className="feature">
         <div>
-          <h2 className=" max-w-md mb-4">
+          <h2
+            className=" max-w-md mb-4 bg-linear-before before:bg-[#07325F]"
+            data-aos="fade-in"
+          >
             The Future is Now and You Just Need To Realize It. Step into Future
             Today & Make it Happen.
           </h2>
@@ -35,15 +19,20 @@ export default function OpenAI() {
             href="#"
             aria-label="click!"
             className="text-secondClr hover:opacity-80"
+            data-aos="fade-in"
+            // data-aos-anchor-placement="center-bottom"
           >
             Request Early Access to Get Started
           </a>
         </div>
         <div className="articles">
-          {articles.map(({ heading, desc }, i) => (
+          {openAiarticles.map(({ heading, desc }, i) => (
             <article
               key={i}
               className="flex gap-4 mb-8 justify-between items-start"
+              data-aos="fade-top-down"
+              data-aos-delay={250 + 100 * i}
+              data-aos-anchor-placement={i !== 0 ? "top-bottom" : undefined}
             >
               <h3 className="max-w-[170px] text-lg before:left-0 before:translate-x-0">
                 {heading}
@@ -53,17 +42,23 @@ export default function OpenAI() {
           ))}
         </div>
       </div>
-      <div className="feature px-[50px]">
-        <Image
-          alt="Possibility"
-          src={Possibility}
-          className=" w-full max-w-[550px] place-self-end"
-        />
-        <div className="self-end mb-8 max-w-md">
+      <div className="feature px-[50px] mt-32">
+        <div
+          data-aos="fade-right"
+          data-aos-delay={500}
+          data-aos-anchor-placement="top-center"
+        >
+          <Image
+            alt="Possibility"
+            src={Possibility}
+            className=" w-full max-w-[550px] place-self-end scale-125 my-12"
+          />
+        </div>
+        <div className="self-end mb-8 max-w-md z-10" data-aos="fade-in">
           <p className=" text-mainClrLighted">
             Request Early Access to Get Started
           </p>
-          <h2 className=" my-4">
+          <h2 className="my-4 bg-linear-after after:bg-[#07325F]">
             The possibilities are beyond your imagination
           </h2>
           <p className="texter my-4">

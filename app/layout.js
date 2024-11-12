@@ -1,32 +1,20 @@
-import { Ubuntu } from "next/font/google";
-import './globals.css';
-
+import "./globals.css";
+import AosContainer from "@/components/aos/Aos";
 
 export const metadata = {
-  title: "GPT3",
-  description: "The place where you can know more about GPT3 - Step Into Future Today & Make It Happen",
+  title: "GPT3 - JavaScript Mastery Design",
+  description:
+    "A responsive landing page transformed from JavaScript Mastery Academy's Figma design. Built by Ragab",
   icon: "/",
-}
-
-
-const ubuntu = Ubuntu({
-  weight: ['300','400', '500', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-ubuntu',
-
-})
-
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-          {
-            children
-          }
+        <AosContainer />
+        {children}
       </body>
     </html>
-  )
+  );
 }

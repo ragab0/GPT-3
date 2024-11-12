@@ -1,31 +1,10 @@
+import { contactInfo } from "@/assets/data/contactInfo";
 import Logo from "@/assets/svgs/logo";
-
-const datas = [
-  {
-    heading: "Links",
-    items: ["Overons", "Social Media", "Counters", "Contact"],
-  },
-  {
-    heading: "Company",
-    items: ["Terms & Conditions", "Privacy Policy", "Contact"],
-  },
-  {
-    heading: "Get in touch",
-    items: [
-      "Crechterwoord K12 182 DK Alknjkcb",
-      "085-132567",
-      "info@payme.net",
-    ],
-  },
-  {
-    heading: "Info",
-    items: ["https://ragab.vercel.app", ""],
-  },
-];
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer id="library" className=" bg-mainSection mt-[150px]">
+    <footer id="library" className=" bg-[#031B34] mt-[150px]">
       <div className="container pt-[150px] pb-[75px]">
         <header className="text-center">
           <h2 className="mx-auto max-w-4xl text-4xl lg:text-6xl ">
@@ -45,7 +24,7 @@ export default function Footer() {
           </div>
         </header>
         <div className="content grid sm:grid-cols-2 md:grid-cols-4 gap-y-8 mt-[150px]">
-          {datas.map(({ heading, items }, i) => (
+          {contactInfo.map(({ heading, items }, i) => (
             <div className={heading}>
               <h4 key={i} className=" before:left-0 before:translate-x-0">
                 {heading}
@@ -67,8 +46,15 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <p className=" bg-mainSectionDarked font-bold text-center p-4">
-        &copy; 2023 - made with &hearts; by Ragab
+      <p
+        className=" bg-mainSectionDarked text-center p-4 py-16"
+        data-aos="zoom-in-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        &copy; 2023 - made with &hearts; by{" "}
+        <Link href="https://ragab.vercel.app" className="font-bold">
+          Ragab
+        </Link>
       </p>
     </footer>
   );

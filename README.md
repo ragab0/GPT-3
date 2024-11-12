@@ -1,22 +1,18 @@
 # GPT-3
 
-A modern and interactive website that showcases the capabilities of GPT-3. This project is built using React and Next.js, transforming a Figma design into a fully functional web application. It serves as a practice platform for mastering these technologies, with a focus on the following features:
+A modern and interactive website that showcases the capabilities of GPT-3. Transformed a Figma design into a responsive, fully functional website using React and Next.js to practice front-end development skills.
 
-- **Beautiful Design**: The website is crafted with a visually appealing layout, utilizing modern design principles to create an engaging user experience.
-- **Responsive Layout**: The site is perfectly responsive, ensuring a seamless experience across all devices, including mobile phones, tablets, laptops, and desktops. Media queries are strategically placed to adapt the layout and content to various screen sizes.
-- **Interactive Elements**: The webpage includes interactive components that enhance user engagement, making navigation intuitive and enjoyable.
-- **Reusable Components**: Built with React functional components, the codebase emphasizes reusability, allowing for efficient development and maintenance.
-- **Organized File Structure**: The project follows a well-structured file and folder organization, making it easy to navigate and understand.
-- **Smooth Animations**: From soft and pleasant animations to complex gradients, the website provides a dynamic visual experience that captivates users.
+![gpt-3-img](./assets/gpt3.png)
 
-![gpt-3-img](./assets/GPT-3.jpg)
+## Key highlights include
 
-## Did you know
+- **Responsive Design**: Ensures smooth display and usability across all devices, with AOS scroll animations adding a touch of interactivity.
+- **Cross-Browser** Compatibility: Built to provide a consistent, user-friendly experience across major browsers.
+- **Optimized Performance**: All images are compressed and served in WebP format for faster load times.
+- **Reusable Components**: Leveraged React components for modularity and efficient maintenance.
+- **Organized Structure**: Follows a clean file structure, making the codebase easy to understand and extend."
 
-- The Possibilities Are Beyond Your Imagination
-- The Future Is Now And You Just Need To Realize It. Step Into Future Today & Make It Happen.
-
-## built with
+## Built with
 
 - HTML5
 - CSS3
@@ -26,8 +22,9 @@ A modern and interactive website that showcases the capabilities of GPT-3. This 
 - Tailwindcss
 - Figma
 
-<!-- ## Sources -->
+## Sources & Reference
 
-<!-- ### See [The academy site](https://resource.jsmasterypro.com/) -->
-<!-- ### View [Main Live Site](https://gpt3-jsm.com/) -->
-<!-- ### Show [Tutorial video](https://www.youtube.com/watch?v=F627pKNUCVQ&t=225s&pp=ygUfYnVpbGQgYW5kIGRlcGxveSA0IG1vZGVybiByZWFjdA%3D%3D) -->
+JavaScript Mastery:
+
+- The figma design: https://www.figma.com/design/cLyVGrGf1qIdXG3IEJFb46/gpt3-(Copy)?node-id=0-15&t=aYQWR0vRWXhiHYzY-1
+- The main video tutorial: https://www.youtube.com/watch?v=LMagNcngvcU&list=PL6QREj8te1P6CkO_4OIK1-nwG5OxCD5tR

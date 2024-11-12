@@ -1,15 +1,11 @@
-/** 
- * @type {import('tailwindcss').Config} 
- * 
+/**
+ * @type {import('tailwindcss').Config}
+ *
  */
 
 module.exports = {
-  darkMode: 'class',
-  content: [
-    './components/**/*.js',
-    './app/**/*.js',
-    './pages/**/*.js',
-  ],
+  darkMode: "class",
+  content: ["./components/**/*.js", "./app/**/*.js", "./pages/**/*.js"],
   theme: {
     extend: {
       colors: {
@@ -19,15 +15,14 @@ module.exports = {
 
         mainSection: "var(--ui-section)",
         mainSectionDarked: "var(--ui-section-darked)",
-        
       },
       backgroundImage: {
-        "mainGradient": 
+        mainGradient:
           "linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%)",
       },
       fontFamily: {
-        ubuntu: ['ubuntu', 'var(--font-ubuntu)', '-apple-system', 'sans-serif'],
+        ubuntu: ["ubuntu", "var(--font-ubuntu)", "-apple-system", "sans-serif"],
       },
     },
   },
-}
+};

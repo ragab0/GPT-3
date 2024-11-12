@@ -1,13 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import Blog1 from "@/assets/imgs/blog01.webp";
-import Blog2 from "@/assets/imgs/blog02.webp";
-import Blog3 from "@/assets/imgs/blog03.webp";
-import Blog4 from "@/assets/imgs/blog04.webp";
-import Blog5 from "@/assets/imgs/blog05.webp";
 import "./Studies.css";
-
-const data = [Blog1, Blog2, Blog3, Blog4, Blog5];
+import Image from "next/image";
+import { blogs } from "@/assets/data/blogs";
 
 export default function Studies() {
   return (
@@ -15,12 +8,15 @@ export default function Studies() {
       <h2 className=" text-center my-[150px] text-4xl lg:text-6xl max-w-[700px] mx-auto">
         A lot is happening, We are blogging about it.
       </h2>
-      <div className="flex flex-wrap justify-center ">
-        {data.map((b, i) => (
+      <div className="flex flex-wrap justify-center">
+        {blogs.map((b, i) => (
           <div className=" md:w-1/2 lg:w-1/3 p-3">
             <figure
               key={i}
               className=" !shadow-mainSectionDarked hover:shadow-[0_0_0_10px]"
+              data-aos="fade-up"
+              data-aos-delay={100 * i}
+              data-aos-anchor-placement="top-bottom"
             >
               <a
                 href="#"

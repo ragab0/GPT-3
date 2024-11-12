@@ -1,0 +1,24 @@
+.the-img {
+  animation: main-animation 30s 1s infinite backwards;
+}
+
+@keyframes main-animation {
+  10% {
+    transform: scale(1.1, 1.1) rotate3d(1, 2, 1, 5deg);
+  }
+  20% {
+    transform: scale(0.8, 0.8) rotate3d(0, 0, 0, 15deg);
+  }
+  80% {
+    transform: scale(1.1, 1.1) rotate3d(50, 50, 5, -15deg);
+  }
+  81% {
+    transform: scale(30, 30) rotate3d(30, 30, 5, 45deg);
+  }
+  83% {
+    transform: scale(0.9, 0.9) rotate3d(30, 30, 5, 5deg);
+  }
+  100% {
+    transform: scale(1, 1) rotate3d(0, 0, 0, 0);
+  }
+}
